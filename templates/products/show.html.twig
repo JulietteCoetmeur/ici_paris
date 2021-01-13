@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% block metadescription %}{{product.description |slice(0, 200)}}{% endblock %}
 {% block title %}<!--nom article-->{% endblock %}
 {% block body %}
 	<div class="container container-one-product">
