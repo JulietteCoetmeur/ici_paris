@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/products", name="produits")
+     * @Route("/produits", name="produits")
      */
     public function index(ProductRepository $productRepository, Request $request): Response
     {
