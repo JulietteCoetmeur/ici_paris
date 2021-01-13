@@ -67,6 +67,53 @@ p {
     width:150px;
     height:150px;
 }
+.style-home-name {
+    font-size: 16px;
+}
+
+.border-style-home {
+    color: var(--framboise);
+    background-color: white;
+    margin-top: -40px;
+}
+.btn-framboise {
+    background-color: var(--framboise);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px 15px;
+}
+.btn-framboise:hover {
+    border: 2px solid var(--framboise);
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+#spin {
+    color: white;
+  }
+#spin:after {
+    content:"";
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% { content:"Cliché"; }
+    10% { content:"Certifié"; }
+    20% { content:"Abusé"; }
+    30% { content:"Parisien"; }
+}
+
+.hashtag-home{
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 9px;
+    margin-left: 25%;
+}
+.color-framboise {
+    color:var(--framboise);
+    letter-spacing: 10px;
+}
+
 /* FIN HOME */
     
 
@@ -178,7 +225,7 @@ p {
 .border-pres {
     border-radius: 15px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: black;
+    color: var(--framboise);
     background-color: white;
     margin-top: -30px;
 }
