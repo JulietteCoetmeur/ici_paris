@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block metadescription %}De beaux produits pour devenir un ou une parfaite parisienne. 
+Vêtements, Accessoires, Objets et Cosmétiques pour toute la famille. 
+Ici c'est Paris vous propose la parfaite panoplie du Hipster, Bobo ou Bourgeois{% endblock %}
+{% block title %}Tous les produits{% endblock %}
+
+{% block body %}
+<div class="container-fluid subnav-bg">
+    <div class="row justify-content-around align-items-center p-2">
+        <div class="text-center col-lg-10 ml-5">
+            <h1 class="text-subnav m-3">Découvrez tous nos produits</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid pb-5">
+    <div class="row mt-5 mx-auto">
+        <div class="col-lg-3 col-md-4 col-sm-10 card-filter pt-3 mx-auto">
+            {{form_start(searchForm, {attr: {class:'filter'}})}}
+            <div class="pl-2 pt-2">
+                <h2><span class="color-letter">F</span>iltres</h2>
+                {{form_row(searchForm.q)}}
+            </div>
+            <div class="pt-2">
+                {{form_row(searchForm.gender)}}
+            </div>
+            <div class="accordion" id="accordionExample">
+                <div>
+                    <div id="headingOne">
+                        <hr>
+                        <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="false" aria-controls="collapseOne">
+                            <h3><span class="color-letter">S</span>tyles</h3>
+                        </button> <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            {{ form_row(searchForm.style)}}
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div id="headingTwo">
+                        <hr>
+                        <button class="btn text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <h3><span class="color-letter">C</span>atégories</h3>
+                        </button> <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            {{ form_row(searchForm.category)}}
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-3 pt-3">
+                    <hr>
+                    <button type="submit" class="btn btn-inscription"> Rechercher</button>
+                </div>
+                {{form_end(searchForm)}}
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <div class="row">
+                {% for product in products %}
+                {% include 'products/product_card.html.twig'%}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+{% endblock %}
