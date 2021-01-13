@@ -68,3 +68,56 @@ p {
     height:150px;
 }
 /* FIN HOME */
+    
+// ONE PRODUCT //
+.container-one-product{
+    padding-top:2rem;
+}
+
+.title-product{
+    font-family: 'Roboto', sans-serif;
+}
+
+.description-title{
+    font-weight: bold;
+}
+
+.advice{
+    background-color: var(--marine);
+    color: white;
+    padding: 3% 3% 3% 3%;
+    margin-bottom: 2rem;
+
+}
+
+.title-advice{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+.text-advice{
+    font-family: 'Roboto', sans-serif;
+}
+
+.title-similar-products{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title-promo{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.similar-products{
+    background-color: var(--marine);
+    color: white;
+}
+
+.hashtags{
+    color: var(--framboise);
+    text-transform: uppercase;
+}
+
+// END ONE PRODUCT //
