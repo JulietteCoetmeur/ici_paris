@@ -29,7 +29,7 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @Route("/legalMentions", name="legal_mentions")
+     * @Route("/mentionslegales", name="legal_mentions")
      */
     public function legalMentions()
     {
