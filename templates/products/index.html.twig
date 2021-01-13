@@ -27,7 +27,7 @@
                         <hr>
                         <button class="btn text-left" type="button" data-toggle="collapse" data-target="#collapseOne"
                             aria-expanded="false" aria-controls="collapseOne">
-                            <h4><span class="color-letter">S</span>tyles</h4>
+                            <h3><span class="color-letter">S</span>tyles</h3>
                         </button> <i class="fas fa-chevron-down"></i>
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
@@ -42,10 +42,10 @@
                         <hr>
                         <button class="btn text-left collapsed" type="button" data-toggle="collapse"
                             data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <h4><span class="color-letter">C</span>atégories</h4>
+                            <h3><span class="color-letter">C</span>atégories</h3>
                         </button> <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                         <div class="card-body">
                             {{ form_row(searchForm.category)}}
                         </div>
@@ -61,29 +61,7 @@
         <div class="col-lg-8 col-md-8">
             <div class="row">
                 {% for product in products %}
-                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 my-3 pr-5">
-                    <div>
-                        <div class="text-center">
-                            <a href="{{path ('product_show', {'product': product.slug})}}" class="link-for-show-img">
-                                <img src="{{ product.image }}" style="width: 13rem;" alt="{{ product.name }}">
-                        </div>
-                        <div class="text-center">
-                            <button class="btn border-pres pl-3 pr-3">
-                                <h4>
-                                    like
-                                </h4>
-                            </button>
-                        </div>
-                        </a>
-                        <div class="card-body ml-2">
-                            <a href="{{path ('product_show', {'product': product.slug})}}" class="link-for-show">
-                                <h2>
-                                    {{product.name}}
-                                </h2>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% include 'products/product_card.html.twig'%}
                 {% endfor %}
             </div>
         </div>

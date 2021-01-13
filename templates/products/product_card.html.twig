@@ -1,0 +1,27 @@
+<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 my-4">
+    <div class="card-border">
+        <a href="{{path ('product_show', {'product': product.slug})}}" class="link-for-show-img">
+            <img src="{{ product.image }}"
+                class="card-img-top" alt="{{ product.name }}">
+            <div class="text-right color-provider mr-3">
+                <button class="btn border-pres pl-3 pr-3">
+                    <span class = "heart">
+                        <i class="far fa-heart"></i>
+                    </span>
+                </button>
+            </div>
+        </a>
+        <div class="card-body">
+            <a href="{{path ('product_show', {'product': product.slug})}}" class="link-for-show">
+                <h4>
+                    {{ product.name }}
+                </h4>
+            </a>
+            <a href="{{path ('product_show', {'product': product.slug})}}" class="link-for-show">
+                <h4>
+                    {{ product.advice }}
+                </h4>
+            </a>
+        </div>
+    </div>
+</div>

@@ -26,7 +26,8 @@ class ProductsController extends AbstractController
         $products = $productRepository->findAll();
 
         if ($searchForm->isSubmitted() && $searchForm->isValid()) {
-            $results = $productRepository->searchProduct($search);    
+            $results = $productRepository->searchProduct($search); 
+            $this->addFlash('info', "Oups, il n'y a pas de résultat, mais nous vous suggérons d'autres produits 😍");   
         }
   
         return $this->render('products/index.html.twig', [
