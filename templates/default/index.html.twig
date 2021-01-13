@@ -1,9 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}e-shop de style parisien{% endblock %}
 
 {% block body %}
-<div class="container">
-    <h1>Test bootstrap</h1>
+<div>
+    <div class="row align-items-center">
+        <div class="col-5 pl-5">
+            <h1 class="logo ml-5 pl-5">ICI<br>C'EST<br>PA<span class="ellipse">RIS</span></h1>
+        </div>
+        <div class="col-lg-7">
+            <img src="https://i.postimg.cc/Xq0kY3gW/ici-cest-paris.jpg" class="img-fluid" alt="">
+        </div>
+    </div>
+</div>
+<div class="bg-section p-5">
+    <h2 class="text-center pb-5 baseline-home">100% certifié</h2>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-lg-4 col-sm-12 p-2">
+            <h3>Le meilleur du Paris<span class="small-ellipse">ien</span></h3>
+            <p>
+                Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia Curae;
+                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+            </p>
+        </div>
+        <div class="col-lg-4 col-sm-12 m-2 ml-p-2">
+            <h3>Survie en milieu hos<span class="small-ellipse">tile</span></h3>
+            <p>
+                Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo,
+                lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus
+                et ultrices posuere cubilia Curae;
+                Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt-5">
+    <h2 class="pl-5">
+        Les styles les plus croisés
+    </h2>
+    <div class="col-lg-8 col-md-8">
+        <div class="row">
+            {% for style in styles %}
+            {% include 'default/style_card.html.twig' %}
+            {% endfor %}
+        </div>
+    </div>
 </div>
 {% endblock %}
