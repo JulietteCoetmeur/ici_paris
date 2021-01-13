@@ -52,12 +52,12 @@ class Product
     /**
      * @ORM\ManyToMany(targetEntity=Style::class, mappedBy="products")
      */
-    private $styles;
+    private $style;
 
     /**
      * @ORM\ManyToMany(targetEntity=Gender::class, mappedBy="products")
      */
-    private $genders;
+    private $gender;
 
     /**
      * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="products")
@@ -77,8 +77,8 @@ class Product
     public function __construct()
     {
         $this->sizes = new ArrayCollection();
-        $this->styles = new ArrayCollection();
-        $this->genders = new ArrayCollection();
+        $this->style = new ArrayCollection();
+        $this->gender = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -176,15 +176,15 @@ class Product
     /**
      * @return Collection|Style[]
      */
-    public function getStyles(): Collection
+    public function getStyle(): Collection
     {
-        return $this->styles;
+        return $this->style;
     }
 
     public function addStyle(Style $style): self
     {
-        if (!$this->styles->contains($style)) {
-            $this->styles[] = $style;
+        if (!$this->style->contains($style)) {
+            $this->style[] = $style;
             $style->addProduct($this);
         }
 
@@ -193,7 +193,7 @@ class Product
 
     public function removeStyle(Style $style): self
     {
-        if ($this->styles->removeElement($style)) {
+        if ($this->style->removeElement($style)) {
             $style->removeProduct($this);
         }
 
@@ -203,15 +203,15 @@ class Product
     /**
      * @return Collection|Gender[]
      */
-    public function getGenders(): Collection
+    public function getGender(): Collection
     {
-        return $this->genders;
+        return $this->gender;
     }
 
     public function addGender(Gender $gender): self
     {
-        if (!$this->genders->contains($gender)) {
-            $this->genders[] = $gender;
+        if (!$this->gender->contains($gender)) {
+            $this->gender[] = $gender;
             $gender->addProduct($this);
         }
 
@@ -220,7 +220,7 @@ class Product
 
     public function removeGender(Gender $gender): self
     {
-        if ($this->genders->removeElement($gender)) {
+        if ($this->gender->removeElement($gender)) {
             $gender->removeProduct($this);
         }
 

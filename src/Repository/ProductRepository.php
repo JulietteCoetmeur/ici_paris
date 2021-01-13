@@ -3,8 +3,9 @@
 namespace App\Repository;
 
 use App\Entity\Product;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use App\Data\SearchProductData;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Product|null find($id, $lockMode = null, $lockVersion = null)
@@ -18,6 +19,47 @@ class ProductRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Product::class);
     }
+
+    public function searchProduct(SearchProductData $search): array
+    {
+        $query = $this
+            ->createQueryBuilder('product')
+            ->from($this->_entityName, 'p')
+            ->innerJoin('product.category', 'category')
+            ->leftJoin('product.gender', 'gender')
+            ->leftJoin('product.style', 'style');
+
+        if (!empty($search->category)) {
+            $query = $query
+                ->andWhere('category.id IN (:category)')
+                ->setParameter('category', $search->category);
+        }
+
+        if (!empty($search->gender)) {
+            $query = $query
+                ->andWhere('gender.id IN (:gender)')
+                ->setParameter('gender', $search->gender);
+        }
+
+        if (!empty($search->style)) {
+            $query = $query
+                ->andWhere('style.id IN (:style)')
+                ->setParameter('style', $search->style);
+        }
+
+        if (!empty($search->q)) {
+            $query = $query
+                ->andWhere('product.name LIKE :q 
+                OR product.description LIKE :q
+                OR category.name LIKE :q
+                OR style.name LIKE :q
+                OR gender.name LIKE :q')
+                ->setParameter('q', "%{$search->q}%");
+        }
+
+        return $query->getQuery()->getResult();
+    }
+
 
     // /**
     //  * @return Product[] Returns an array of Product objects
