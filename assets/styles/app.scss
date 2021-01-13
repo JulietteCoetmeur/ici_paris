@@ -77,6 +77,32 @@ p {
     background-color: white;
     margin-top: -40px;
 }
+.btn-framboise {
+    background-color: var(--framboise);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px 15px;
+}
+.btn-framboise:hover {
+    border: 2px solid var(--framboise);
+    text-decoration: none;
+    color: white;
+    background-color: transparent;
+}
+#spin {
+    color: white;
+  }
+#spin:after {
+    content:"";
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    0% { content:"Cliché"; }
+    10% { content:"Certifié"; }
+    20% { content:"Abusé"; }
+    30% { content:"Parisien"; }
+}
 /* FIN HOME */
     
 

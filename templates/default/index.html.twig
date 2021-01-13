@@ -4,18 +4,21 @@
 
 {% block body %}
 
-<div>
+<div class="container-fluid">
     <div class="row align-items-center">
-        <div class="col-5 pl-5">
+        <div class="col-lg-5 col-md-5 pl-5">
             <h1 class="logo ml-5 pl-5">ICI<br>C'EST<br>PA<span class="ellipse">RIS</span></h1>
         </div>
-        <div class="col-lg-7">
-            <img src="https://i.postimg.cc/Xq0kY3gW/ici-cest-paris.jpg" class="img-fluid" alt="">
+        <div class="col-lg-7 col-md-12">
+            <img src="https://i.postimg.cc/Xq0kY3gW/ici-cest-paris.jpg" class="img-fluid" alt="Cliché français couple parisien devant tour eiffel">
         </div>
     </div>
 </div>
 <div class="bg-section p-5">
-    <h2 class="text-center pb-5 baseline-home">100% cliché</h2>
+    <p class="text-center pb-5 baseline-home">
+        100% <span id="spin"></span>
+        
+    </p>
     <div class="row align-items-center justify-content-center">
         <div class="col-lg-4 col-md-6 col-sm-7 m-2 pr-4">
             <h3>Le meilleur du Paris<span class="small-ellipse">ien</span></h3>
@@ -39,14 +42,23 @@
         </div>
     </div>
 </div>
-<div class="container-fluid mt-5">
+<div class="container mt-5">
     <h2 class="text-center">
         Les styles les plus croisés
     </h2>
-    <div class="row">
+    <div class="row pt-5">
         {% for style in styles %}
         {% include 'default/style_card.html.twig' %}
         {% endfor %}
     </div>
+</div>
+<div class="bg-section p-5">
+    <div class="text-center">
+        <h3>Vous n'êtes pas Parisien ?</h3>
+        <h4>Découvrez notre Starter-Kit de survie</h4>
+        <div class="pt-5">
+            <a class="btn-framboise" href="#" role="button">Découvrir la sélection</a>
+        </div>
+    </div> 
 </div>
 {% endblock %}
