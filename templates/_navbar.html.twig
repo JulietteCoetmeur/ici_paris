@@ -1,30 +1,31 @@
 <nav class="navbar navbar-expand-lg nav-bar">
-	<a class="navbar-brand nav-bar-white title-navbar" href="#">ICI C'EST PARIS</a>
-		<ul class="navbar-nav ml-auto float-right">
-			<li class="nav-item active">
-				{% if app.session.get('panier') %}
-					<a class="nav-link nav-bar-white title-navbar" href="#"><!--ajouter lien panier-->
-						<i class="fas fa-shopping-cart"></i>
-						<span class="badge badge-danger color-badge">{{ app.session.get('count') }}</span>
-					</a>
-				{% else %}
-					<a class="nav-link nav-bar-white title-navbar" href="#">
-          <!--ajouter lien panier-->
-						<i class="fas fa-shopping-cart"></i>
-					</span>
-				</a>
-			{% endif %}
-		</li>
-		<li class="nav-item active">
-			<a class="nav-link nav-bar-white title-navbar" href="{{path('produits')}}">Boutique</a>
-			<span class="sr-only"></span>
-		</li>
-	</a>
-</li>
-<li class="nav-item">
-	<a class="nav-link nav-bar-white title-navbar" href="#">Guide de survie</a>
-  <!--ajouter lien guide de survie-->
-</li>
-</div>
-</ul>
+  <a class="navbar-brand nav-bar-white title-navbar" href="#">ICI C'EST PA<span class="small-ellipse">RIS</span></a>
+  <ul class="navbar-nav ml-auto float-right">
+    <li class="nav-item active">
+      <a class="nav-link nav-bar-white title-navbar" href="{{path('produits')}}">Boutique</a>
+      <span class="sr-only"></span>
+    </li>
+    </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link nav-bar-white title-navbar" href="#">Guide de survie</a>
+      <!--ajouter lien guide de survie-->
+    </li>
+    <li class="nav-item active">
+      {% if app.session.get('panier') %}
+      <a class="nav-link nav-bar-white title-navbar" href="#">
+        <!--ajouter lien panier-->
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge badge-danger color-badge">{{ app.session.get('count') }}</span>
+      </a>
+      {% else %}
+      <a class="nav-link nav-bar-white title-navbar" href="#">
+        <!--ajouter lien panier-->
+        <i class="fas fa-shopping-cart"></i>
+        </span>
+      </a>
+      {% endif %}
+    </li>
+    </div>
+  </ul>
 </nav>
