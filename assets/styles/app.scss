@@ -116,6 +116,10 @@ p {
     color : white;
 }
 
+.nav-link:hover{
+    color : var(--framboise);
+}
+
 .black-logo a{
     color : black;
     text-decoration: none;
