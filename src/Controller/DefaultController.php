@@ -19,4 +19,12 @@ class DefaultController extends AbstractController
             'styles' => $styles,
         ]);
     }
+
+    /**
+     * @Route("/faq", name="faq")
+     */
+    public function faq()
+    {
+        return $this->render('default/faq.html.twig');
+    }
 }
