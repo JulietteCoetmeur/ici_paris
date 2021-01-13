@@ -27,4 +27,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/faq.html.twig');
     }
+
+    /**
+     * @Route("/legalMentions", name="legal_mentions")
+     */
+    public function legalMentions()
+    {
+        return $this->render('default/legalmentions.html.twig');
+    }
 }
