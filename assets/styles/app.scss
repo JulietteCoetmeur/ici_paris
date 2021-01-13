@@ -17,7 +17,6 @@ $primary: darken(#428bca, 20%);
 
 h1{
     font-family: 'Oswald', 'Raleway';
-    font-weight: 100;
 }
 
 //NAVBAR//
@@ -95,5 +94,76 @@ h1{
     color: var(--framboise);
     text-transform: uppercase;
 }
-
 // END ONE PRODUCT //
+
+
+//ALL PRODUCTS debut//
+.color-letter{
+    color: var(--framboise);
+    font-weight: 100;
+}
+.card-filter {
+    border: 1px solid whitesmoke;
+    -webkit-box-shadow: 2px 10px 13px -7px #000000, 3px 3px 3px -1px rgba(0,0,0,0); 
+    box-shadow: 2px 10px 13px -7px #000000, 3px 3px 3px -1px rgba(0,0,0,0);
+    border-radius: 16px 16px;
+}
+
+.text-subnav {
+    color: var(--marine);
+    font-size: 30px;
+    font-weight: 100;
+}
+.filter {
+    display: block;
+    position:sticky;
+    top:20px;
+   }
+
+.border-pres {
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: yellow;
+    background-color: white;
+    margin-top: -30px;
+}
+.color-editor {
+    color:blue;
+    font-weight: 300;
+    font-size: 23px;
+}
+p {
+    font-size: 18px;
+}
+.color-expertise {
+    color: yellow;
+}
+.color-provider {
+    color: blue;
+}
+
+#profil {
+    object-fit: cover;
+    width: 150%;
+}
+
+.heart{
+    font-size:30px;
+}
+
+.link-for-show {
+    color: black;
+    text-decoration: none;
+}
+
+.link-for-show:hover {
+    color: blue;
+}
+
+.link-for-show-img:hover {
+    filter: brightness(80%);
+-webkit-filter: brightness(80%);
+}
+
+//ALL PRODUCTS FIN//
+
