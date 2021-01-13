@@ -4,23 +4,67 @@ $primary: darken(#428bca, 20%);
 // the ~ allows you to reference things in node_modules
 @import "~bootstrap/scss/bootstrap";
 
-h1 {
-    font-family: 'Oswald', 'Raleway';
-    background-color: red;
+
+:root{
+    --framboise : #FE1541;
+    --marine : #1A2434;
 }
 
-// :root{
-//     --framboise : #FE1541;
-//     --marine : #1A2434;
-//     --lila_clair: #F2EFF6;
-// }
+*{
+    margin : 0px;
+    padding : 0px;
+}
 
-// *{
-//     margin : 0px;
-//     padding : 0px;
-// }
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+}
 
-// h1{
-//     font-family: 'Oswald', 'Raleway';
-//     font-weight: 100;
-// }
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HOME PAGE */
+
+.logo {
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 90px;
+    letter-spacing: 0.23em;
+}
+
+.bg-section {
+    background-color: var(--marine);
+    color: white;
+}
+
+.ellipse {
+    background:var(--framboise);
+    border-radius:100%;
+    width:150px;
+    height:150px;
+    position: absolute;
+}
+
+.baseline-home {
+    font-size: 55px;
+}
+
+.small-ellipse {
+    background:var(--framboise);
+    border-radius:100%;
+    width:150px;
+    height:150px;
+}
+/* FIN HOME */
