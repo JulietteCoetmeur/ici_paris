@@ -69,6 +69,11 @@ class Product
      */
     private $advice;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $slug;
+
     public function __construct()
     {
         $this->sizes = new ArrayCollection();
@@ -242,6 +247,18 @@ class Product
     public function setAdvice(?string $advice): self
     {
         $this->advice = $advice;
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }
