@@ -20,6 +20,31 @@ h1{
     font-weight: 100;
 }
 
+//NAVBAR//
+
+.nav-bar{
+    background-color : var(--marine);
+}
+
+.nav-bar-white{
+    color : white;
+}
+
+.black-logo a{
+    color : black;
+    text-decoration: none;
+}
+
+.title-navbar{
+    font-family: 'Oswald';
+}
+
+.title-footer{
+    font-family: 'Oswald';
+}
+
+//END NAVBAR//
+
 // ONE PRODUCT //
 .container-one-product{
     padding-top:2rem;
