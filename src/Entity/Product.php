@@ -64,6 +64,11 @@ class Product
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $advice;
+
     public function __construct()
     {
         $this->sizes = new ArrayCollection();
@@ -225,6 +230,18 @@ class Product
     public function setCategory(?Category $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getAdvice(): ?string
+    {
+        return $this->advice;
+    }
+
+    public function setAdvice(?string $advice): self
+    {
+        $this->advice = $advice;
 
         return $this;
     }
