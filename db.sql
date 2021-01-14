@@ -302,19 +302,23 @@ INSERT INTO `size_product` (`size_id`, `product_id`) VALUES
 CREATE TABLE `style` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `picture` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `style`
+-- Déchargement des données de la table `style`
 --
 
-INSERT INTO `style` (`id`, `name`, `slug`) VALUES
-(1, 'Bobo', 'bobo'),
-(2, 'Hipster', 'hipster'),
-(3, 'Bourgeois', 'bourgeois'),
-(4, 'Banlieusard', 'banlieusard'),
-(5, 'Provincial', 'provincial');
+INSERT INTO `style` (`id`, `name`, `slug`, `picture`, `description`, `title`) VALUES
+(1, 'Bobo', 'bobo', 'https://i.postimg.cc/7Yz1pxFX/Sans-titre-1.jpg', 'Le terme bobo, contraction de bourgeois-bohème, désigne un sociostyle, c\'est-à-dire une tentative de caractériser un groupe social selon les valeurs que ses membres partagent, plutôt que selon leurs caractéristiques socio-économiques ou démographiques1.\r\nS\'il est difficile de précisément décrire un bobo, le sociologue Camille Peugny donne en 2010 cette définition : « une personne qui a des revenus sans qu’ils soient faramineux, plutôt diplômée, qui profite des opportunités culturelles et vote à gauche2 ».\r\nLe terme est utilisé pour la première fois par le professeur de sociologie Michel Clouscard, défini comme bourgeois libéral-libertaire (lili-bobo) dans Néo-fascisme et idéologie du désir (1973) : économiquement à droite et idéologiquement à gauche ; le plus souvent, le bobo se prétend du peuple tout en possédant un gros patrimoine et d\'importants revenus ; il n\'a par conséquent pas la mentalité d\'un homme du peuple, qu\'il soit prolétaire, artisan ou marginal.', '\'es ce qu\'un Bobo parisien ? '),
+(2, 'Hipster', 'hipster', 'https://i.postimg.cc/DwdrwxyX/Sans-titre-5.jpg', 'Le terme américain hipster semble apparaitre pour la première fois, avec son sens moderne, dans The Hipster Handbook publié en 2003 par des habitants du quartier Williamsburg de Brooklyn (New York, USA). Les années précédentes, vers 2000, le terme n\'apparaissait pas encore dans les articles du New York Times ou du Time Out New York consacrés au quartier Williamsburg ; les membres de cette sous-culture étaient encore désignés comme des « bohèmes » (bohemians) ou « ceux d\'East Village qui se donnent un genre artiste » (arty East Village types).\r\n\r\nLe mot hipster désignait auparavant les adeptes d\'une sous-culture américaine des années 1940-1950, sorte d\'artistes bohèmes amateurs de musique jazz : les hipsters.', 'and sont apparues les premiers hipster ?'),
+(3, 'Bourgeois', 'bourgeois', 'https://i.postimg.cc/GpCsGdNg/unnamed.png', 'Dérivé de « bourgeois » (habitant du bourg), le vocable « bourgeoisie » est attesté dès 1538 avec le sens d\'« ensemble des habitants du bourg » et en 937 sous la forme « bourgesie », correspondant au latin burgensia, au sens juridique de citoyen ayant le droit de cité.\r\n\r\nEn Suisse, il désigne le droit de cité ou de citoyenneté dans une commune4.\r\nEn italien borghesia, de même que borghese, est emprunté au français « bourgeoisie »', 'i sont les nouveaux bourgeois ?'),
+(4, 'Banlieusard', 'banlieusard', 'https://i.postimg.cc/VL2tsjF8/f32b44e39ad5d55b6451e079b3474e67.jpg', 'Pour un banlieusard, vivre à Paris n\'a rien d\'un rêve mais il aimerait juste essayer. Pour voir. Quitte à fiche le camp pour la province ou la campagne à la première occasion venue. Voire y déménager. Paris devient alors la case de passage obligée. Vous partez pour Colmar en passant par l\'avenue Mozart et vous encaissez 20 000 euros pour ne jamais revenir. \r\nPour un banlieusard, vivre à Paris, c\'est pouvoir aller au cinéma le midi dans un trou à rat des Halles pour visionner un film kurdo-coréen en VO de trois heures avant de se taper un kebab no-gluten. Le nirvana pluriéthnique qui manque tant à la banlieue, n\'est-ce pas ?\r\nMoralité : derrière chaque banlieusard se cache un vrai Parisien à qui on ne la fait pas', 'i sont réellement les vrais banlieusard ?'),
+(5, 'Provincial', 'provincial', 'https://i.postimg.cc/zfznbTVP/Sans-titre-6.jpg', 'A Paris la plupart des gens que l\'on croise viennent de Province . Il existe finalement peu de Parisiens nés et élevés à Paris. Mais à partir de quelques mois dans la capitale une manière d\'être et de vivre prends le dessus. Le provincial de passage ou récemment arrivé est du coup très repérable.', 'i sont les vrais parisiens ?');
+
 
 -- --------------------------------------------------------
 
