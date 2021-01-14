@@ -72,6 +72,9 @@ Ici c'est Paris vous propose la parfaite panoplie du Hipster, Bobo ou Bourgeois{
                     {% for product in products %}
                     {% include 'products/product_card.html.twig'%}
                     {% endfor %}
+                    <div class="navigation">
+                        {{ knp_pagination_render(products) }}
+                    </div>
                 </div>
             </div>
         </div>
