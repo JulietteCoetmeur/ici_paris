@@ -39,7 +39,7 @@ class DefaultController extends AbstractController
     }
 
      /**
-     * @Route("/{style}", name="style_show")
+     * @Route("/style/{style}", name="style_show")
      * @ParamConverter("style", class="App\Entity\Style", options={"mapping": {"style": "slug"}})
      */
     public function showStyle(Style $style, StyleRepository $styleRepository): Response
