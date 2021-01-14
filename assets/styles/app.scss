@@ -182,7 +182,7 @@ p {
 }
 
 .title-similar-products{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
@@ -206,6 +206,17 @@ p {
     color: white;
     text-decoration: none;
 }
+
+.framboise{
+    padding-left:5%;
+    color: var(--framboise);
+}
+
+.price{
+    font-size:30px;
+
+}
+
 // END ONE PRODUCT //
 
 
