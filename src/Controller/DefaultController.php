@@ -42,10 +42,12 @@ class DefaultController extends AbstractController
      * @Route("/{style}", name="style_show")
      * @ParamConverter("style", class="App\Entity\Style", options={"mapping": {"style": "slug"}})
      */
-    public function showStyle(Style $style): Response
+    public function showStyle(Style $style, StyleRepository $styleRepository): Response
     {
+        $styles = $styleRepository->findAll();
         return $this->render('default/style_show.html.twig', [
             'style' => $style,
+            'styles' => $styles
         ]);
 
     }

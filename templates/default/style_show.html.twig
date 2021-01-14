@@ -4,6 +4,31 @@
 {% block title %} Style - {{style.name}} {% endblock %}
 
 {% block body %}
-
+<div class="container container-one-product">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="{{style.picture}}" alt="{{style.name}}" class="img-fluid" width="80%">
+        </div>
+        <div class="col-lg-6">
+            <div class="presentation">
+                <h1 class="display-6 title-product"><span class="small-ellipse">Qu</span>{{style.title}}</h1>
+                <p class="lead">{{style.description}}</p>
+            </div>
+        </div>
+        <div class="container advice col-lg-5 mt-5">
+            <div class="container">
+                <p class="title-advice">LE CONSEIL DU PARISIEN</p>
+                <p class="text-advice text-center hashtags">BE YOURSELF</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid similar-products">
+        <div class="container mt-5 row">
+        <p class="title-similar-products">Les autres styles du paris<span class="small-ellipse">ien</span></p>
+        {% for style in styles %}
+        {% include 'default/style_card.html.twig'%}
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}
