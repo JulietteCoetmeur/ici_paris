@@ -34,11 +34,6 @@ class Style
      */
     private $slug;
 
-    public function __toString(): string
-    {
-        return $this->name;
-    }
-
     /**
      * @ORM\Column(type="text")
      */
@@ -53,6 +48,11 @@ class Style
      * @ORM\Column(type="string", length=255)
      */
     private $title;
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 
     public function __construct()
     {
