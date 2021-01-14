@@ -277,3 +277,43 @@ p {
 }
 
 //ALL PRODUCTS FIN//
+
+
+//PAGE 404//
+
+.link-404 {
+    color: var(--framboise);
+    text-decoration: none;
+}
+
+.link-404:hover {
+    color: var(--marine);
+    text-decoration: none;
+}
+
+.ellipse-404 {
+    background:var(--framboise);
+    border-radius:100%;
+    width: 350px;
+    height: 350px;
+}
+
+.error-404-height {
+    min-height: 350px;
+}
+
+.text-error {
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 435px) {
+    .ellipse-404 {  
+       display:none;
+    }
+
+    .error-404-height {
+        min-height: none;
+    }
+}
+//PAGE 404 fin//

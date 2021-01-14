@@ -2,10 +2,14 @@
 {% block title %}Page non trouvée{% endblock %}
 {% block body %}
 
-
-<h1>Oups, page non trouvée</h1>
-<h2>404 - The Page can't be found</h2>
-<a href="/" class="btn button-color">Go TO Homepage</a>
-
-
+<div class="jumbotron jumbotron-fluid">
+	<div class="container error-404-height">
+		<div class="ellipse-404 float-left"></div>
+		<div class = "text-error">
+			<h1 class="display-4">Erreur 404</h1>
+			<p class="lead error-text">Oups, il semble que cette page n'existe plus, retrouvez nous sur la <a
+					href="{{path('home')}}" class="link-404">page d'accueil</a>.</p>
+		</div>
+	</div>
+</div>
 {% endblock %}
