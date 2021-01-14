@@ -37,7 +37,9 @@
 						<div class="card-body text-center">
 							<h5 class="card-title-article">{{suggestions[i].name}}</h5></a>
 							<p class="from">à partir de {{suggestions[i].price}}€</p>
-                            <p class="hashtags">#BOBO #HIPSTER</p>
+							{% for style in product.style %}
+								<p class="hashtags">#{{style.name}}</p>
+                   			{% endfor %}
 						</div>
 					</div>
 					{% endfor %}
