@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block metadescription %}De beaux produits pour devenir un ou une parfaite parisienne. 
-Vêtements, Accessoires, Objets et Cosmétiques pour toute la famille. 
+{% block metadescription %}De beaux produits pour devenir un ou une parfaite parisienne.
+Vêtements, Accessoires, Objets et Cosmétiques pour toute la famille.
 Ici c'est Paris vous propose la parfaite panoplie du Hipster, Bobo ou Bourgeois{% endblock %}
 {% block title %}Tous les produits{% endblock %}
 
@@ -52,7 +52,8 @@ Ici c'est Paris vous propose la parfaite panoplie du Hipster, Bobo ou Bourgeois{
                             <h3 class="color-letter">Catégories</h3>
                         </button> <i class="fas fa-chevron-down"></i>
                     </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                        data-parent="#accordionExample">
                         <div class="card-body">
                             {{ form_row(searchForm.category)}}
                             <hr>
@@ -65,11 +66,13 @@ Ici c'est Paris vous propose la parfaite panoplie du Hipster, Bobo ou Bourgeois{
                 {{form_end(searchForm)}}
             </div>
         </div>
-        <div class="col-lg-8 col-md-8">
-            <div class="row">
-                {% for product in products %}
-                {% include 'products/product_card.html.twig'%}
-                {% endfor %}
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <div class="row">
+                    {% for product in products %}
+                    {% include 'products/product_card.html.twig'%}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

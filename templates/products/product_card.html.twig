@@ -4,9 +4,9 @@
             <img src="{{ product.image }}" class="img-fluid" id="profil" alt="{{ product.name }}">
             <div class="text-right color-provider mr-3">
                 <button class="btn pl-3 pr-3 border-pres">
-                    <span class="heart border-style-products p-2">
+                    <p class="heart border-style-products p-2">
                         <i class="far fa-heart like-icon"></i>
-                    </span>
+                    </p>
                 </button>
             </div>
         </a>
@@ -20,7 +20,7 @@
                 <div class="row">
                     {% for style in product.style %}
                     <div class="col-6">
-                        <p class=" mt-2 text-framboise">.{{style.name}}</p>
+                        <p class=" mt-2 text-framboise">#{{style.name}}</p>
                     </div>
                     {% endfor %}
                 </div>
