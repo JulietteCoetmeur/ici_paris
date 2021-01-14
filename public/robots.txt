@@ -1,0 +1,5 @@
+# Group 1
+User-Agent: *
+Allow: /
+
+Sitemap: https://localhost:8000/sitemap.xml
