@@ -2,22 +2,22 @@
 -- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:8889
--- Généré le :  mer. 13 jan. 2021 à 22:58
--- Version du serveur :  5.7.26
--- Version de PHP :  7.4.2
+-- Host: localhost:8889
+-- Generation Time: Jan 14, 2021 at 09:44 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Base de données :  `ici_paris`
+-- Database: `ici_paris`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -27,7 +27,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`id`, `name`, `slug`) VALUES
@@ -41,7 +41,7 @@ INSERT INTO `category` (`id`, `name`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `doctrine_migration_versions`
+-- Table structure for table `doctrine_migration_versions`
 --
 
 CREATE TABLE `doctrine_migration_versions` (
@@ -51,7 +51,7 @@ CREATE TABLE `doctrine_migration_versions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Déchargement des données de la table `doctrine_migration_versions`
+-- Dumping data for table `doctrine_migration_versions`
 --
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
@@ -62,7 +62,7 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gender`
+-- Table structure for table `gender`
 --
 
 CREATE TABLE `gender` (
@@ -71,7 +71,7 @@ CREATE TABLE `gender` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `gender`
+-- Dumping data for table `gender`
 --
 
 INSERT INTO `gender` (`id`, `name`) VALUES
@@ -82,7 +82,7 @@ INSERT INTO `gender` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `gender_product`
+-- Table structure for table `gender_product`
 --
 
 CREATE TABLE `gender_product` (
@@ -90,10 +90,58 @@ CREATE TABLE `gender_product` (
   `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `gender_product`
+--
+
+INSERT INTO `gender_product` (`gender_id`, `product_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3),
+(1, 8),
+(1, 9),
+(1, 10),
+(1, 11),
+(1, 24),
+(1, 25),
+(1, 26),
+(1, 37),
+(1, 38),
+(1, 39),
+(1, 45),
+(2, 2),
+(2, 3),
+(2, 10),
+(2, 11),
+(2, 25),
+(2, 26),
+(2, 27),
+(2, 28),
+(2, 29),
+(2, 30),
+(2, 31),
+(2, 32),
+(2, 33),
+(2, 34),
+(2, 35),
+(2, 36),
+(2, 37),
+(2, 38),
+(2, 39),
+(2, 45),
+(2, 75),
+(3, 2),
+(3, 40),
+(3, 41),
+(3, 42),
+(3, 43),
+(3, 44),
+(3, 74);
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -109,7 +157,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `category_id`, `name`, `description`, `image`, `price`, `quantity`, `advice`, `slug`) VALUES
@@ -143,7 +191,7 @@ INSERT INTO `product` (`id`, `category_id`, `name`, `description`, `image`, `pri
 (44, 10, 'Poussette yoyo', '\r\nÀ la naissance, installez sur le cadre de la poussette, le pack nouveau-né 0+ qui permet\r\nd’allonger votre bébé totalement à plat, face àvous, pour toujours avoir un œil sur lui.\r\nLe pack nouveau-né 0+ a été pensé pour apporter le maximum de confort à votre bébé\r\ngrâce à son hamac moelleux et douillet, conçu spécialement pour accueillir un nouveau-né. Dans cette version, YOYO2 se plie et se déplie d’une seule main avec votre enfant dans les bras.\r\nPliage en « un seul élément » ultra compact.\r\nMatelas renforcé et totalement à plat.\r\nCale-tête et couvre-pieds.\r\nHarnais 5 points.\r\nCapote “pop-up” avec 2 positions d’ouverture différentes.\r\nTissu anti-UV (UPF 50+) traitédéperlant.\r\nPliage « un seul élément » ultra-compact et dimension bagage cabine\r\nPolaire sherpa blanc écru douce et moelleuse\r\nCale-tête en tissu doux et léger, assorti à la couleur du matelas\r\nMatelas moelleux et confortable (20 mm d’épaisseur) avec harnais 5 points\r\nCapote pop-up avec deux positions\r\nSangle réglable à l’entrejambe pour une installation optimale de votre bébé\r\nCouvre-pieds dans la même matière que la capote, pour une meilleure\r\nprotection (tissu + résistant et traité déperlant) et un meilleur rendu\r\nLavable en machine à 30°C en retirant les plaques de la base textile ainsi que\r\nl’arceau de la capote', 'https://i.postimg.cc/BQJYKzRg/images.jpg', 250, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'poussette-tout-terrain-parisien'),
 (45, 14, 'Livre d\'insulte pour apprendre le language du métro', 'This essential phrasebook collects the most colourful, explicit and outrageous ways to tell people off in different languages from all around the world. Featuring dozens of different languages, the sayings range from everyday swears to family curses to x-rated encounters with animals. Some of the most useful expressions include wishing an enemy a painful death, insulting a person\'s grandmother and accusing someone\'s mother of having intimate relations with bears in the forest.\r\n\r\n', 'https://i.postimg.cc/ydgq2G79/41hoqz-XPOEL-SX355-BO1-204-203-200.jpg\r\n', 15, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.\r\n', 'language-de-la-street'),
 (57, 11, 'Pouf/rangement pour ton 15m2', 'Pouf coffre en simili SERAFINO\r\nCouleur : chocolat, blanc ou noir\r\nRevêtement en simili.\r\nAstucieux mélange de polyuréthane et de tissu, le simili a l’aspect du cuir et est agréable au toucher, tout en étant facile à vivre : un simple coup d’éponge suffit à lui enlever les éventuelles tâches ou salissures. Cette matière est donc idéale pour les grandes familles, les petits budgets ou pour tous ceux qui ne veulent pas passer trop de temps à entretenir leur canapé !\r\nAssise garnie de mousse polyuréthane d\'une densité de 25 kg/m3.\r\nStructure en bois massif.\r\nPieds en PVC.', 'https://i.postimg.cc/NMYTz36C/pouf-rangement-656x344.jpg', 35, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'pouf-rangement'),
-(58, 11, 'Code barre pour retrouver ton vélo volé', 'En associant le numéro de série d\'un vélo à son propriétaire, la base nationale Paravol lève un frein à l\'utilisation quotidienne du vélo. Une fois le vélo enregistré sur la base, il devient identifiable et restituable.\r\n\r\n\r\n', 'https://i.postimg.cc/Kc0L0sRQ/Sans_titre-1.jpg', 35, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', ''),
+(58, 11, 'Code barre pour retrouver ton vélo volé', 'En associant le numéro de série d\'un vélo à son propriétaire, la base nationale Paravol lève un frein à l\'utilisation quotidienne du vélo. Une fois le vélo enregistré sur la base, il devient identifiable et restituable.\r\n\r\n\r\n', 'https://i.postimg.cc/Kc0L0sRQ/Sans_titre-1.jpg', 35, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'code-barre-velo'),
 (59, 14, 'Permis de conduire avec points illimités et bonus amendes pour un mauvais', 'Obligations de l\'accompagnateur\r\nL\'apprenti conducteur doit être sous la surveillance constante et directe d\'un accompagnateur durant son apprentissage de la conduite.\r\nL\' accompagnateur doit remplir les conditions suivantes :\r\nAvoir le permis B depuis au moins 5 ans\r\nNe pas avoir été sanctionné, dans les 5 années précédentes, par une annulation ou une invalidation du permis de conduire\r\nNe pas être rémunéré pour cette tâche\r\nSigner la charte de l\'accompagnateur\r\nVeiller à ce que l\'apprenti conducteur respecte les règles de sécurité, en particulier les limitations de vitesse\r\n\r\n\r\n', 'https://i.postimg.cc/yYNhBCww/permis-conduire-auto.jpg', 450, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'permis-special-parisien'),
 (60, 10, 'Pince-nez pour éviter les odeurs du métro', 'Le pince-nez est un équipement utilisé pour comprimer les narines du nez. Il est utilisé dans différents sports aquatiques afin d\'empêcher l\'entrée de l\'eau dans le nez.\r\n\r\n', 'https://i.postimg.cc/j24M16nP/HTB1-Mo-Yn-HSYBu-Nj-Sspfq6-AZCp-Xao.jpg', 10, 40, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'pince-nez-anti-odeurs'),
 (61, 14, 'Un jardin zen contre le stress', 'Originaire du pays du Soleil Levant servant à la méditation, le jardin zen miniature permet de recréer la nature de façon réduite : Le sable représente la mer, les pierres symbolisent les rochers ou les îles, la statuette ou le Bouddha entraîne à la méditation, puis les portes bougies apportent ... La lumière et la volupté ! Retrouvez dans chacun de ces mini jardins l\'esprit zen des jardins japonais pour vous ressourcer ! En plus de leur qualité décorative, chaque mini jardin zen entouré d\'un socle exprimera pleinement votre créativité et vos émotions du moment. Ainsi composé de sa statuette ou de son Bouddha, il représentera votre personnalité et aucune autre ! Par cette idée de cadeau anti-stress aux senteurs de bonheur et de sérénité, songez à vos proches et à tous vos chers amis en leur donnant l\'occasion de concevoir tout en plénitude leur propre mini jardin zen “ secret ” socle : 26cmx26cm\r\n', 'https://i.postimg.cc/hP9nSNT1/5e10839f4b299e140e2f6485-5-large.jpg', 25, 50, 'Ici c\'est Paris vous recommande ce trench pour passer vos automnes dans le 16ème ou bien le 8ème arrondissement à l\'abri du vent.\r\nRien de mieux que ce manteau long pour vous fondre dans la masse bourgeoise des beaux quartiers parisiens.', 'jardin-zen-detox'),
@@ -165,7 +213,7 @@ INSERT INTO `product` (`id`, `category_id`, `name`, `description`, `image`, `pri
 -- --------------------------------------------------------
 
 --
--- Structure de la table `size`
+-- Table structure for table `size`
 --
 
 CREATE TABLE `size` (
@@ -174,7 +222,7 @@ CREATE TABLE `size` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `size`
+-- Dumping data for table `size`
 --
 
 INSERT INTO `size` (`id`, `name`) VALUES
@@ -192,7 +240,7 @@ INSERT INTO `size` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `size_product`
+-- Table structure for table `size_product`
 --
 
 CREATE TABLE `size_product` (
@@ -200,10 +248,55 @@ CREATE TABLE `size_product` (
   `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `size_product`
+--
+
+INSERT INTO `size_product` (`size_id`, `product_id`) VALUES
+(1, 2),
+(1, 31),
+(2, 2),
+(2, 31),
+(2, 32),
+(2, 33),
+(3, 2),
+(3, 31),
+(3, 32),
+(3, 33),
+(4, 2),
+(4, 31),
+(4, 32),
+(4, 33),
+(4, 34),
+(5, 2),
+(5, 31),
+(5, 33),
+(5, 34),
+(6, 2),
+(6, 31),
+(7, 1),
+(7, 9),
+(7, 28),
+(7, 35),
+(7, 74),
+(8, 1),
+(8, 9),
+(8, 28),
+(8, 30),
+(8, 35),
+(8, 74),
+(9, 1),
+(9, 9),
+(9, 28),
+(9, 30),
+(9, 35),
+(10, 9),
+(10, 28);
+
 -- --------------------------------------------------------
 
 --
--- Structure de la table `style`
+-- Table structure for table `style`
 --
 
 CREATE TABLE `style` (
@@ -213,7 +306,7 @@ CREATE TABLE `style` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Déchargement des données de la table `style`
+-- Dumping data for table `style`
 --
 
 INSERT INTO `style` (`id`, `name`, `slug`) VALUES
@@ -226,7 +319,7 @@ INSERT INTO `style` (`id`, `name`, `slug`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `style_product`
+-- Table structure for table `style_product`
 --
 
 CREATE TABLE `style_product` (
@@ -235,29 +328,134 @@ CREATE TABLE `style_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Index pour les tables déchargées
+-- Dumping data for table `style_product`
+--
+
+INSERT INTO `style_product` (`style_id`, `product_id`) VALUES
+(1, 2),
+(1, 8),
+(1, 9),
+(1, 10),
+(1, 11),
+(1, 24),
+(1, 28),
+(1, 37),
+(1, 38),
+(1, 39),
+(1, 40),
+(1, 41),
+(1, 42),
+(1, 43),
+(1, 44),
+(1, 57),
+(1, 58),
+(1, 59),
+(1, 61),
+(1, 62),
+(1, 65),
+(1, 66),
+(1, 68),
+(1, 71),
+(1, 74),
+(2, 2),
+(2, 3),
+(2, 9),
+(2, 10),
+(2, 11),
+(2, 24),
+(2, 27),
+(2, 28),
+(2, 29),
+(2, 30),
+(2, 32),
+(2, 35),
+(2, 36),
+(2, 37),
+(2, 38),
+(2, 39),
+(2, 42),
+(2, 43),
+(2, 44),
+(2, 57),
+(2, 58),
+(2, 61),
+(2, 62),
+(2, 65),
+(2, 68),
+(2, 71),
+(2, 75),
+(3, 1),
+(3, 8),
+(3, 9),
+(3, 10),
+(3, 11),
+(3, 24),
+(3, 25),
+(3, 26),
+(3, 29),
+(3, 31),
+(3, 33),
+(3, 34),
+(3, 37),
+(3, 41),
+(3, 44),
+(3, 59),
+(3, 60),
+(4, 10),
+(4, 11),
+(4, 26),
+(4, 37),
+(4, 40),
+(4, 44),
+(4, 59),
+(4, 63),
+(4, 64),
+(5, 3),
+(5, 10),
+(5, 11),
+(5, 25),
+(5, 26),
+(5, 37),
+(5, 43),
+(5, 44),
+(5, 45),
+(5, 57),
+(5, 60),
+(5, 61),
+(5, 62),
+(5, 66),
+(5, 67),
+(5, 68),
+(5, 69),
+(5, 70),
+(5, 71),
+(5, 72),
+(5, 73);
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `doctrine_migration_versions`
+-- Indexes for table `doctrine_migration_versions`
 --
 ALTER TABLE `doctrine_migration_versions`
   ADD PRIMARY KEY (`version`);
 
 --
--- Index pour la table `gender`
+-- Indexes for table `gender`
 --
 ALTER TABLE `gender`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `gender_product`
+-- Indexes for table `gender_product`
 --
 ALTER TABLE `gender_product`
   ADD PRIMARY KEY (`gender_id`,`product_id`),
@@ -265,20 +463,20 @@ ALTER TABLE `gender_product`
   ADD KEY `IDX_21A271114584665A` (`product_id`);
 
 --
--- Index pour la table `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`id`),
   ADD KEY `IDX_D34A04AD12469DE2` (`category_id`);
 
 --
--- Index pour la table `size`
+-- Indexes for table `size`
 --
 ALTER TABLE `size`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `size_product`
+-- Indexes for table `size_product`
 --
 ALTER TABLE `size_product`
   ADD PRIMARY KEY (`size_id`,`product_id`),
@@ -286,13 +484,13 @@ ALTER TABLE `size_product`
   ADD KEY `IDX_3627D6D54584665A` (`product_id`);
 
 --
--- Index pour la table `style`
+-- Indexes for table `style`
 --
 ALTER TABLE `style`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `style_product`
+-- Indexes for table `style_product`
 --
 ALTER TABLE `style_product`
   ADD PRIMARY KEY (`style_id`,`product_id`),
@@ -300,65 +498,65 @@ ALTER TABLE `style_product`
   ADD KEY `IDX_B5669A994584665A` (`product_id`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `category`
+-- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `gender`
+-- AUTO_INCREMENT for table `gender`
 --
 ALTER TABLE `gender`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `product`
+-- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
--- AUTO_INCREMENT pour la table `size`
+-- AUTO_INCREMENT for table `size`
 --
 ALTER TABLE `size`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT pour la table `style`
+-- AUTO_INCREMENT for table `style`
 --
 ALTER TABLE `style`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `gender_product`
+-- Constraints for table `gender_product`
 --
 ALTER TABLE `gender_product`
   ADD CONSTRAINT `FK_21A271114584665A` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_21A27111708A0E0` FOREIGN KEY (`gender_id`) REFERENCES `gender` (`id`) ON DELETE CASCADE;
 
 --
--- Contraintes pour la table `product`
+-- Constraints for table `product`
 --
 ALTER TABLE `product`
   ADD CONSTRAINT `FK_D34A04AD12469DE2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`);
 
 --
--- Contraintes pour la table `size_product`
+-- Constraints for table `size_product`
 --
 ALTER TABLE `size_product`
   ADD CONSTRAINT `FK_3627D6D54584665A` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `FK_3627D6D5498DA827` FOREIGN KEY (`size_id`) REFERENCES `size` (`id`) ON DELETE CASCADE;
 
 --
--- Contraintes pour la table `style_product`
+-- Constraints for table `style_product`
 --
 ALTER TABLE `style_product`
   ADD CONSTRAINT `FK_B5669A994584665A` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE,
