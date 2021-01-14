@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use App\Repository\StyleRepository;
+use App\Entity\Style;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
 class DefaultController extends AbstractController
 {
@@ -34,5 +36,19 @@ class DefaultController extends AbstractController
     public function legalMentions()
     {
         return $this->render('default/legalmentions.html.twig');
+    }
+
+     /**
+     * @Route("/style/{style}", name="style_show")
+     * @ParamConverter("style", class="App\Entity\Style", options={"mapping": {"style": "slug"}})
+     */
+    public function showStyle(Style $style, StyleRepository $styleRepository): Response
+    {
+        $styles = $styleRepository->findAll();
+        return $this->render('default/style_show.html.twig', [
+            'style' => $style,
+            'styles' => $styles
+        ]);
+
     }
 }

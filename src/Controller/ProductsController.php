@@ -60,4 +60,5 @@ class ProductsController extends AbstractController
             'suggestions' => $result,
         ]);
     }
+    
 }
