@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Repository\StyleRepository;
+use App\Repository\ProductRepository;
 use App\Entity\Style;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -49,6 +50,13 @@ class DefaultController extends AbstractController
             'style' => $style,
             'styles' => $styles
         ]);
+    }
 
+    /**
+     * @Route("/starterkit", name="starter_kit")
+     */
+    public function starterKit(): Response
+    {
+        return $this->render('default/starterKit.html.twig');
     }
 }
