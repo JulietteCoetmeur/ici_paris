@@ -16,7 +16,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 class ProductsController extends AbstractController
 {
     /**
-     * @Route("/products", name="produits")
+     * @Route("/produits", name="products")
      */
     public function index(ProductRepository $productRepository, Request $request): Response
     {
@@ -38,7 +38,7 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("/{product}", name="product_show")
+     * @Route("produits/{slug}", name="product_show")
      * @ParamConverter("product", class="App\Entity\Product", options={"mapping": {"product": "slug"}})
      */
     public function showProduct(Product $product): Response
