@@ -22,18 +22,13 @@ class SitemapController extends AbstractController
         $urls[] = ['loc' => $this->generateUrl('home')];
         $urls[] = ['loc' => $this->generateUrl('faq')];
         $urls[] = ['loc' => $this->generateUrl('legal_mentions')];
+        $urls[] = ['loc' => $this->generateUrl('products')];
 
         foreach($this->getDoctrine()->getRepository(Product::class)->findAll() as $product){
-            $images = [
-                'loc' => '/assets/images/'.$product->getFeaturedImage(),
-                'name' => $product->getName()
-            ];
-        
             $urls[] = [
-                'loc' => $this->generateUrl('produits', [
+                'loc' => $this->generateUrl('product_show', [
                     'slug' => $product->getSlug(),
                 ]),
-                'image' => $images,
             ];
         }
 
