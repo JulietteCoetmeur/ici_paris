@@ -38,8 +38,8 @@ class ProductsController extends AbstractController
     }
 
     /**
-     * @Route("produits/{slug}", name="product_show")
-     * @ParamConverter("product", class="App\Entity\Product", options={"mapping": {"product": "slug"}})
+     * @Route("/produits/{slug}", name="product_show")
+     * @ParamConverter("product", class="App\Entity\Product", options={"mapping": {"slug": "slug"}})
      */
     public function showProduct(Product $product): Response
     {
