@@ -36,11 +36,19 @@ p {
 
 /* HOME PAGE */
 
-.logo {
+.logo-home {
     font-family: 'Oswald', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 90px;
+    letter-spacing: 0.23em;
+}
+
+.logo-mention{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
     letter-spacing: 0.23em;
 }
 
@@ -72,7 +80,6 @@ p {
 }
 
 .border-style-home {
-    
     color: var(--framboise);
     background-color: white;
     margin-top: -40px;
@@ -83,6 +90,7 @@ p {
     text-decoration: none;
     padding: 10px;
     border-radius: 15px 15px;
+    border: 1px solid var(--framboise);
 }
 .btn-framboise:hover {
     border: 2px solid var(--framboise);
@@ -103,6 +111,25 @@ p {
     20% { content:"Abusé"; }
     30% { content:"Parisien"; }
 }
+
+.hashtag-home{
+    font-size: 50px;
+    line-height: 80px;
+    letter-spacing: 9px;
+    
+}
+.color-framboise {
+    color:var(--framboise);
+    letter-spacing: 10px;
+}
+@media (min-width: 700) and (max-width: 1900) { 
+    .hashtag-home{
+        margin-left: 36%;
+    }
+ }
+ .spacing-s {
+     letter-spacing: 22px;
+ }
 /* FIN HOME */
     
 
@@ -131,6 +158,10 @@ p {
 
 .title-footer{
     font-family: 'Oswald';
+}
+
+.logo:hover{
+    color:white;
 }
 
 //END NAVBAR//
@@ -166,7 +197,7 @@ p {
 }
 
 .title-similar-products{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
@@ -185,19 +216,37 @@ p {
     color: var(--framboise);
     text-transform: uppercase;
 }
+
+#suggestion-link{
+    color: white;
+    text-decoration: none;
+}
+
+.framboise{
+    padding-left:5%;
+    color: var(--framboise);
+}
+
+.price{
+    font-size:30px;
+
+}
+
 // END ONE PRODUCT //
 
 
 //ALL PRODUCTS debut//
 .color-letter{
+    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+}
+.color-letter::first-letter{
     color: var(--framboise);
-    font-weight: 100;
 }
 .card-filter {
     border: 1px solid whitesmoke;
     -webkit-box-shadow: 2px 10px 13px -7px #000000, 3px 3px 3px -1px rgba(0,0,0,0); 
     box-shadow: 2px 10px 13px -7px #000000, 3px 3px 3px -1px rgba(0,0,0,0);
-    border-radius: 16px 16px;
 }
 
 .text-subnav {
@@ -216,26 +265,16 @@ p {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     color: var(--framboise);
     background-color: white;
-    margin-top: -30px;
-}
-.color-editor {
-    color:blue;
-    font-weight: 300;
-    font-size: 23px;
+    margin-top: -40px;
 }
 p {
     font-size: 18px;
 }
-.color-expertise {
-    color: yellow;
-}
-.color-provider {
-    color: blue;
-}
 
 #profil {
     object-fit: cover;
-    width: 150%;
+    width: 100%;
+    height: 25%;
 }
 
 .heart{
@@ -248,13 +287,99 @@ p {
 }
 
 .link-for-show:hover {
-    color: blue;
+    color: var(--framboise);
+    text-decoration: none;
 }
 
 .link-for-show-img:hover {
     filter: brightness(80%);
 -webkit-filter: brightness(80%);
+text-decoration: none;
+}
+.text-framboise {
+    color: var(--framboise);
+}
+.border-style-products {
+    margin-top: -40px;
+    border-radius: 50px 50px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.like-icon:hover {
+    color: var(--framboise);
+}
+
+.like-icon {
+    background-color: white;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.btn-framboise-filtre {
+    background-color: var(--framboise);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px 15px;
+    border: 1px solid var(--framboise);
+}
+.btn-framboise-filtre:hover {
+    border: 2px solid var(--framboise);
+    text-decoration: none;
+    color:black;
+    background-color: transparent;
+}
+.filter-design {
+    letter-spacing: 7px;
+}
+
+.page-item.active .page-link{
+    background-color: var(--framboise)!important;
+    border:1px solid var(--framboise)!important;
+}
+.page-item .page-link:hover {
+    color: black!important;
 }
 
 //ALL PRODUCTS FIN//
 
+
+//PAGE 404//
+
+.link-404 {
+    color: var(--framboise);
+    text-decoration: none;
+}
+
+.link-404:hover {
+    color: var(--marine);
+    text-decoration: none;
+}
+
+.ellipse-404 {
+    background:var(--framboise);
+    border-radius:100%;
+    width: 350px;
+    height: 350px;
+}
+
+.error-404-height {
+    min-height: 350px;
+}
+
+.text-error {
+    position: absolute;
+    z-index: 1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 435px) {
+    .ellipse-404 {  
+       display:none;
+    }
+
+    .error-404-height {
+        min-height: none;
+    }
+}
+//PAGE 404 fin//

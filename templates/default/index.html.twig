@@ -10,10 +10,10 @@ Choisissez votre look : hipster, bobo, bourgeois..
 
 <div class="container-fluid">
     <div class="row align-items-center">
-        <div class="col-lg-5 col-md-5 pl-5">
-            <h1 class="logo ml-5 pl-5">ICI<br>C'EST<br>PA<span class="ellipse">RIS</span></h1>
+        <div class="col-lg-5 col-md-5 col-sm-10 pl-5">
+            <h1 class="logo-home ml-lg-5 pl-lg-5">ICI<br>C'EST<br>PA<span class="ellipse">RIS</span></h1>
         </div>
-        <div class="col-lg-7 col-md-12">
+        <div class="col-lg-7 col-md-12 col-sm-10">
             <img src="https://i.postimg.cc/Xq0kY3gW/ici-cest-paris.jpg" class="img-fluid" alt="Cliché français couple parisien devant tour eiffel">
         </div>
     </div>
@@ -33,7 +33,7 @@ Choisissez votre look : hipster, bobo, bourgeois..
                 Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
             </p>
         </div>
-        <div class="col-lg-4 col-md-6 col-sm-7 m-2 pl-4">
+        <div class="col-lg-4 col-md-6 col-sm-7 m-2 pl-md-4">
             <h3>Survie en milieu hos<span class="small-ellipse">tile</span></h3>
             <p>
                 Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo,
@@ -60,8 +60,26 @@ Choisissez votre look : hipster, bobo, bourgeois..
         <h3>Vous n'êtes pas Parisien ?</h3>
         <h4>Découvrez notre Starter-Kit de survie</h4>
         <div class="pt-5">
-            <a class="btn-framboise" href="#" role="button">Découvrir la sélection</a>
+            <a class="btn-framboise" href="{{path('starter_kit')}}" role="button">Découvrir la sélection</a>
         </div>
     </div> 
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 d-none d-sm-block">
+            <img src="https://images.unsplash.com/photo-1471623432079-b009d30b6729?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80" 
+            class="w-100" alt="metro de Paris Montmarte">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <img src="https://images.unsplash.com/photo-1597461104020-cc38c370fc00?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80" 
+            class="w-100" alt="Parisien en velib dans à Boulevard-Haussmann">
+        </div>
+        <div class="col-md-8 col-sm-6 bg-section">
+            <p class="hashtag-home p-3">#IL<span class="spacing-s">S</span>SONT<br><span class="color-framboise">PARISIENS</span></p>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            
+        </div>
+    </div>
 </div>
 {% endblock %}

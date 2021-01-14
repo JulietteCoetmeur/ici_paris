@@ -5,65 +5,48 @@
 	<div class="container container-one-product">
 		<div class="row">
 			<div class="col-lg-6">
-				<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c18da2efe501464ba268a80b00baccbe_9366/Chaussure_Stan_Smith_Blanc_M20605_01_standard.jpg" alt="" class="img-fluid" width="50%">
+				<img src="{{product.image}}" alt="{{product.name}}" class="img-fluid" width="50%">
 			</div>
 			<div class="col-lg-6">
 				<div class="presentation">
-					<h1 class="display-6 title-product">ADIDAS - STAN SMITH</h1>
-					<p>Du 32 au 46</p>
-					<p class="lead">L'inimitable Stan Smith, à allier avec un pantalon chino.</p>
+					<h1 class="display-6 title-product">{{product.name}}</h1>
+					<p class="price">{{product.price}} €</p>
+					<p class="lead">{{product.description}}</p>
 				</div>
 				<div class="description">
-					<p class="description-title">DESCRIPTION:</p>
-					<p>Dessus : Cuir et Synthétique
-						<br>Semelle intérieure : Textile
-						<br>Semelle extérieure : Caoutchouc
-						<br>Lavage à la main</p>
-					<br>
+					<p class="description-title"><span class="small-ellipse">DE</span>SCRIPTION: </p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores voluptatem animi et magni culpa rerum dolorem! Tempore, sunt quas? Et modi a dolores nisi? Labore assumenda inventore itaque libero? </p>
 				</div>
 			</div>
 			<div class="container advice col-lg-5 mt-5">
 				<div class="container">
-					<p class="title-advice">LE CONSEIL DU PARISIEN</p>
-					<p class="text-advice">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+					<p class="title-advice">LE CONSEIL DU PARISIEN<span class="framboise">.</span></p>
+					<p class="text-advice">{{product.advice}}</p>
 				</div>
 			</div>
 		</div>
-
 		<div class="container-fluid similar-products">
 			<div class="container mt-5">
 			<p class="title-similar-products">Produits similaires</p>
 				<h3 class="title-promo">Nos clients ont aussi aimé</h3>
 				<div class="row">
+				{% for i in 0..2 %}
 					<div class="col-lg-4 col-md-6 col-sm-12 my-3">
-						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c18da2efe501464ba268a80b00baccbe_9366/Chaussure_Stan_Smith_Blanc_M20605_01_standard.jpg" class="card-img topimage _b1" alt="">
+						<a href="{{path ('product_show', {'slug': suggestions[i].slug})}}" id="suggestion-link">
+						<img src="{{suggestions[i].image}}" class="card-img topimage _b1" alt="{{suggestions[i].name}}">
 						<div class="card-body text-center">
-							<h5 class="card-title-article">ADIDAS</h5>
-							<p class="from">à partir de ?€</p>
-                            <p class="hashtags">#BOBO #HIPSTER</p>
+							<h5 class="card-title-article">{{suggestions[i].name}}</h5></a>
+							<p class="from">à partir de {{suggestions[i].price}}€</p>
+							{% for style in product.style %}
+								<p class="hashtags">#{{style.name}}</p>
+                   			{% endfor %}
 						</div>
 					</div>
-                    <!--ici supprimer les fausses cards-->
-                    <div class="col-lg-4 col-md-6 col-sm-12 my-3">
-						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c18da2efe501464ba268a80b00baccbe_9366/Chaussure_Stan_Smith_Blanc_M20605_01_standard.jpg" class="card-img topimage _b1" alt="">
-						<div class="card-body text-center">
-							<h5 class="card-title-article">ADIDAS</h5>
-							<p class="from">à partir de ?€</p>
-                            <p class="hashtags">#BOBO #HIPSTER</p>
-						</div>
-					</div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 my-3">
-						<img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c18da2efe501464ba268a80b00baccbe_9366/Chaussure_Stan_Smith_Blanc_M20605_01_standard.jpg" class="card-img topimage _b1" alt="">
-						<div class="card-body text-center">
-							<h5 class="card-title-article">ADIDAS</h5>
-							<p class="from">à partir de ?€</p>
-                            <p class="hashtags">#BOBO #HIPSTER</p>
-						</div>
-					</div>
-                    <!--fin fausses cards-->
+					{% endfor %}
 				</div>
 			</div>
 		</div>
+    </div>
 
 	{% endblock %}
 

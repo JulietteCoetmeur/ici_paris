@@ -1,0 +1,201 @@
+{% extends 'base.html.twig' %}
+{% block metadescription %} Tu viens de débarquer à Paris et tu ne sais pas comment tu vas
+pouvoir t'en sortir dans cette grande ville? Ne t'inquiète pas Ici c'est Paris est là pour te venir en aide 
+et te guider avec la sélection de nos meilleurs articles!
+{% endblock %}
+{% block title %} Starter Kit du nouveau parisien {% endblock %}
+
+{% block body %}
+<h1 class="display-6 title-product text-center mt-5">Starter Pack du nouveau parisien</h1>
+<br>
+<div class="container text-center p-3">
+<p class="lead"><span class="small-ellipse">Tu v</span>iens d'arriver à Paris, cette grande et magnifique capitale mais tu te 
+demandes comment tu vas vas faire pour survivre dans cette jungl<span class="small-ellipse">e ...</span>
+Ne t'en fais pas, Ici c'est Paris est là avec une sélection de produit pour te permettre de t'en sortir peu
+importe ka situati<span class="small-ellipse">on ...</span></p>
+</div>
+<h2 class="text-subnav m-3 text-center"><span class="small-ellipse">Les</span> indispensables par style</h2>
+<div class="row">
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+    <div class="card-border">
+        <h3 class="card-title lead text-center">Pour le Hipster</h3>
+        <a href="https://localhost:8000/produits/plus-d-attente-pour-les-bars" class="link-for-show-img">
+            <img src="https://i.postimg.cc/pVzxdL63/terrasse.png"
+                class="card-img-top" alt="photo terrasse avec bar parisien">
+            <div class="text-right color-provider mr-3">
+                <button class="btn pl-3 pr-3">
+                    <h3 class="border-style-home style-home-name p-3 ">
+                        Tickets de réservation pour avoir une place en terrasse
+                    </h3>
+                </button>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+    <div class="card-border">
+        <h3 class="card-title lead text-center">Pour le Bobo</h3>
+        <a href="https://localhost:8000/produits/poudre-bebe-baguette" class="link-for-show-img">
+            <img src="https://i.postimg.cc/xCHxvV0s/cereales-infantiles-avoine-ble-riz-bebe-des-6-mois-good-gout-front-vp-23.jpg"
+                class="card-img-top" alt="poudre bébé saveur baguette">
+            <div class="text-right color-provider mr-3">
+                <button class="btn pl-3 pr-3">
+                    <h3 class="border-style-home style-home-name p-3 ">
+                        Poudre pour bébé goût baguette
+                    </h3>
+                </button>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+    <div class="card-border">
+        <h3 class="card-title lead text-center">Pour le Banlieusard</h3>
+        <a href="https://localhost:8000/produits/metro-boulot-dodo" class="link-for-show-img">
+            <img src="https://i.postimg.cc/Tw8QYNrn/homme-fatigue-dans-autobus-dormir-oreiller-gonflable-cervical-transport-1423-3034.jpg"
+                class="card-img-top" alt="photo de coussin pour transports">
+            <div class="text-right color-provider mr-3">
+                <button class="btn pl-3 pr-3">
+                    <h3 class="border-style-home style-home-name p-3 ">
+                        Un oreiller pour les banlieusards qui font 1h30 de trajet matin et soir
+                    </h3>
+                </button>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+    <div class="card-border">
+        <h3 class="card-title lead text-center">Pour le Bourgeois</h3>
+        <a href="https://localhost:8000/produits/Chemise-pull-pour-bobo" class="link-for-show-img">
+            <img src="https://i.postimg.cc/d3VCqGS8/pull-eco-responsable-camel-homme-dc-36125241400370839.jpg"
+                class="card-img-top" alt="tenue chemise et pull">
+            <div class="text-right color-provider mr-3">
+                <button class="btn pl-3 pr-3">
+                    <h3 class="border-style-home style-home-name p-3 ">
+                        Ensemble chemise/pull
+                    </h3>
+                </button>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+    <div class="card-border">
+        <h3 class="card-title lead text-center">Pour le Provincial</h3>
+        <a href="https://localhost:8000/produits/tableau-foret" class="link-for-show-img">
+            <img src="https://i.postimg.cc/kMS3cL1P/5cf33e71eacb8254223af055-large.jpg"
+                class="card-img-top" alt="tableau géant de fôret">
+            <div class="text-right color-provider mr-3">
+                <button class="btn pl-3 pr-3">
+                    <h3 class="border-style-home style-home-name p-3 ">
+                        Un poster de forêt pour se rapprocher de la nature
+                    </h3>
+                </button>
+            </div>
+        </a>
+    </div>
+</div>
+</div>
+<h2 class="text-subnav m-3 text-center"><span class="small-ellipse">Les</span> indispensables par catégories</h2>
+<div class="row">
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Vêtements</h3>
+            <a href="https://localhost:8000/produits/trench-beige" class="link-for-show-img">
+                <img src="https://i.postimg.cc/4y0Ysqcg/trench-femme_(1).jpg"
+                    class="card-img-top" alt="trench beige pour femme">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Trench Beige                        
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Chaussures</h3>
+            <a href="https://localhost:8000/produits/mocassin-paris-16" class="link-for-show-img">
+                <img src="https://i.postimg.cc/NGD8WjP6/mocassin-brecourt-marron-patine.jpg"
+                    class="card-img-top" alt="mocassins pour hommes">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Mocassins
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Accessoires</h3>
+            <a href="https://localhost:8000/produits/beret-femme" class="link-for-show-img">
+                <img src="https://i.postimg.cc/tTGX9y7y/beret-classique-noir-femme.jpg"
+                    class="card-img-top" alt="beret bleu">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Béret femme
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Objets</h3>
+            <a href="https://localhost:8000/produits/sifflet-anti-agression" class="link-for-show-img">
+                <img src="https://i.postimg.cc/8cX6ssqx/sifflet-plastique.jpg"
+                    class="card-img-top" alt="photo de sifflet">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Alarme anti-agression
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Cosmétique
+            </h3>
+            <a href="https://localhost:8000/produits/creme-antipollution" class="link-for-show-img">
+                <img src="https://i.postimg.cc/MGLN0Y1G/Baume-Anti-pollution-SAYES.jpg"
+                    class="card-img-top" alt="pot de creme hydratante">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Crème anti-pollution
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12 mx-auto">
+        <div class="card-border">
+            <h3 class="card-title lead text-center">Life Style
+            </h3>
+            <a href="https://localhost:8000/produits/tuto-metro" class="link-for-show-img">
+                <img src="https://i.postimg.cc/JhHP8CB1/jacques-chirac-tourniquet.jpg"
+                    class="card-img-top" alt="photo de Chirac fraudant dans le metro">
+                <div class="text-right color-provider mr-3">
+                    <button class="btn pl-3 pr-3">
+                        <h3 class="border-style-home style-home-name p-3 ">
+                            Un tuto pour frauder le métro
+                        </h3>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+{% endblock %}
