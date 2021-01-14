@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Product;
 use App\Data\SearchProductData;
 use Doctrine\Persistence\ManagerRegistry;
+use Knp\Component\Pager\PaginatorInterface;
+use Knp\Component\Pager\Pagination\PaginationInterface;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
@@ -15,12 +17,16 @@ use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
  */
 class ProductRepository extends ServiceEntityRepository
 {
-    public function __construct(ManagerRegistry $registry)
+    public function __construct(ManagerRegistry $registry, PaginatorInterface $paginator)
     {
         parent::__construct($registry, Product::class);
+        $this->paginator = $paginator;
     }
 
-    public function searchProduct(SearchProductData $search): array
+    /**
+     * @return PaginationInterface
+     */
+    public function searchProduct(SearchProductData $search): PaginationInterface
     {
         $query = $this
             ->createQueryBuilder('product')
@@ -57,7 +63,13 @@ class ProductRepository extends ServiceEntityRepository
                 ->setParameter('q', "%{$search->q}%");
         }
 
-        return $query->getQuery()->getResult();
+        $query = $query->getQuery()->getResult();
+        return $this->paginator->paginate(
+            $query,
+            1,
+            12
+        );
+
     }
 
 
