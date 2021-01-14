@@ -44,6 +44,14 @@ p {
     letter-spacing: 0.23em;
 }
 
+.logo-mention{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    letter-spacing: 0.23em;
+}
+
 .bg-section {
     background-color: var(--marine);
     color: white;
@@ -108,13 +116,20 @@ p {
     font-size: 50px;
     line-height: 80px;
     letter-spacing: 9px;
-    margin-left: 25%;
+    
 }
 .color-framboise {
     color:var(--framboise);
     letter-spacing: 10px;
 }
-
+@media (min-width: 700) and (max-width: 1900) { 
+    .hashtag-home{
+        margin-left: 36%;
+    }
+ }
+ .spacing-s {
+     letter-spacing: 22px;
+ }
 /* FIN HOME */
     
 
