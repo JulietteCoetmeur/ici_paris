@@ -41,13 +41,23 @@ class ProductsController extends AbstractController
      * @Route("/produits/{slug}", name="product_show")
      * @ParamConverter("product", class="App\Entity\Product", options={"mapping": {"slug": "slug"}})
      */
-    public function showProduct(Product $product): Response
+    public function showProduct(Product $product, ProductRepository $productRepository): Response
     {
+        $productsStyle = $product->getStyle();
+        $suggestions = $productsStyle[0]->getProducts();
+        $result = [];
+
+        foreach($suggestions as $item)
+        {
+            if($item->getId() !== $product->getId())
+            {
+                $result[] = $item;
+            }
+        }
+
         return $this->render('products/show.html.twig', [
             'product' => $product,
+            'suggestions' => $result,
         ]);
-
     }
-
-
 }

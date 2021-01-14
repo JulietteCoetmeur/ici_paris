@@ -34,6 +34,12 @@ class Style
      */
     private $slug;
 
+    public function __toString(): string
+    {
+        return $this->name;
+    }
+
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
