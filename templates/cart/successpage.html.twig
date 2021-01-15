@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Merci beaucoup !{% endblock %}
+
+{% block body %}
+<div class="container-success">
+    <div class="text-center">
+        <h1 class="display-4 text-dark big-title">Votre commande a été validée !</h1>
+        <img src="{{ asset('build/successcart.png') }}" width="35%" alt="empty-cart">
+    </div>
+    <div class="text-center">
+        <a href="{{path('products')}}" class="text-lg btn-fra">Retour à la boutique</a>
+    </div>
+</div>
+{% endblock %}
