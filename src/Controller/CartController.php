@@ -58,4 +58,14 @@ class CartController extends AbstractController
         return $this->redirectToRoute('cart_index');
     }
 
+    /**
+     * @Route("/success", name="successcart")
+     */
+
+    public function success(SessionInterface $session)
+    {
+        $session->clear();
+        return $this->render('cart/successpage.html.twig');
+    }
+
 }

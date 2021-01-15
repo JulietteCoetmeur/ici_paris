@@ -175,12 +175,9 @@ p {
     padding-top:2rem;
 }
 
-.title-product{
-    font-family: 'Roboto', sans-serif;
-}
-
 .description-title{
-    font-weight: bold;
+    font-family: 'Roboto';
+ 
 }
 
 .advice{
@@ -194,6 +191,10 @@ p {
 .title-advice{
     font-family: 'Raleway', sans-serif;
     font-size: 30px;
+}
+
+.img-shadow{
+    box-shadow: 0px 0px 3px 4px rgb(172, 171, 171);
 }
 
 .text-advice{
@@ -233,6 +234,10 @@ p {
 
 .price{
     font-size:30px;
+}
+
+.card-one{
+    padding-top: 5%;
 }
 
 // END ONE PRODUCT //
@@ -434,5 +439,9 @@ text-decoration: none;
 .btn-checkout{
     margin-bottom: 3%;
     margin-top: -2%;
+}
+
+.container-success{
+    margin-bottom: 3%;
 }
 // END CART //

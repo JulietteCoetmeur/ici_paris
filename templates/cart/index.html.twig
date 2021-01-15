@@ -9,13 +9,10 @@
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 pl-2">
 					<h1 class="mb-5">Récapitulatif de ma commande</h1>
-					{# <p class="cart-link text-right">
-						<a href="{{path('products')}}">Retour à la boutique</a>
-					</p> #}
-                     <div class="text-psst">
+                    <div class="text-psst">
                         <p>Psst... Avez-vous tout ce qu'il vous faut ?</p>
                         <div class="text-center">
-                            <a href=""class="btn-fra">Continuer vos achats</a>
+                            <a href="{{path('products')}}"class="btn-fra">Continuer vos achats</a>
                         </div>
                     </div>
 					<table class="table table-cart">
@@ -63,7 +60,7 @@
 				</div>
 			</div>
             <div class="text-center btn-checkout">
-                <a href="#" class="btn-fra"><i class="fas fa-credit-card"></i> Procéder au paiement</a>
+                <a href="{{path('cart_successcart')}}" class="btn-fra"><i class="fas fa-credit-card"></i> Procéder au paiement</a>
             </div>
 		{% else %}
 			<div class="text-center">
