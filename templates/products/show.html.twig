@@ -17,6 +17,9 @@
 					<p class="description-title"><span class="small-ellipse">DE</span>SCRIPTION: </p>
 					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores voluptatem animi et magni culpa rerum dolorem! Tempore, sunt quas? Et modi a dolores nisi? Labore assumenda inventore itaque libero? </p>
 				</div>
+				<div class="text-center">
+					<a href="{{path('cart_add', {'id' : product.id})}}" class="btn-fra"><i class="fas fa-shopping-cart"></i> Ajouter au panier</a>
+				</div>
 			</div>
 			<div class="container advice col-lg-5 mt-5">
 				<div class="container">
@@ -33,13 +36,13 @@
 				{% for i in 0..2 %}
 					<div class="col-lg-4 col-md-6 col-sm-12 my-3">
 						<a href="{{path ('product_show', {'slug': suggestions[i].slug})}}" id="suggestion-link">
-						<img src="{{suggestions[i].image}}" class="card-img topimage _b1" alt="{{suggestions[i].name}}">
+						<img src="{{suggestions[i].image}}" alt="{{suggestions[i].name}}">
 						<div class="card-body text-center">
 							<h5 class="card-title-article">{{suggestions[i].name}}</h5></a>
 							<p class="from">à partir de {{suggestions[i].price}}€</p>
 							{% for style in product.style %}
 								<p class="hashtags">#{{style.name}}</p>
-                   			{% endfor %}
+						{% endfor %}
 						</div>
 					</div>
 					{% endfor %}

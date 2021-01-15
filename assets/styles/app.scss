@@ -164,6 +164,10 @@ p {
     color:white;
 }
 
+.badge-nav{
+    font-family: 'Roboto', sans-serif;
+}
+
 //END NAVBAR//
 
 // ONE PRODUCT //
@@ -229,7 +233,6 @@ p {
 
 .price{
     font-size:30px;
-
 }
 
 // END ONE PRODUCT //
@@ -383,3 +386,53 @@ text-decoration: none;
     }
 }
 //PAGE 404 fin//
+
+// START CART //
+
+.container-cart{
+    margin-bottom:5%;
+}
+
+.btn-fra {
+    background-color: var(--framboise);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px 10px;
+    border: 1px solid var(--framboise);
+}
+
+.btn-fra a{
+    color: white;
+    
+}
+.btn-fra:hover{
+    color:white;
+}
+
+.cart-link a{
+    color:black;
+    text-decoration: none;
+}
+
+.total-title{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.total-price{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.text-psst{
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.btn-checkout{
+    margin-bottom: 3%;
+    margin-top: -2%;
+}
+// END CART //
