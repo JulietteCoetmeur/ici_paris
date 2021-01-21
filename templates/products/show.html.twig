@@ -11,11 +11,8 @@
 				<div class="presentation">
 					<h1 class="title-product">{{product.name}}</h1>
 					<p class="price">{{product.price}} €</p>
+					<p class="description-title">DESCRIPTI<span class="small-ellipse">ON</span> </p>
 					<p class="lead">{{product.description}}</p>
-				</div>
-				<div class="description">
-					<p class="description-title"><span class="small-ellipse">DE</span>SCRIPTION: </p>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores voluptatem animi et magni culpa rerum dolorem! Tempore, sunt quas? Et modi a dolores nisi? Labore assumenda inventore itaque libero? </p>
 				</div>
 				<div class="text-center">
 					<a href="{{path('cart_add', {'id' : product.id})}}" class="btn-fra">
